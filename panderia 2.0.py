@@ -141,7 +141,7 @@ class InventarioApp:
         except:
             datos = []
 
-        datos.append(producto.to_dict())
+        datos.append(producto.mostrar())
 
         with open("inventario_panaderia.json", "w") as archivo:
             json.dump(datos, archivo, indent=4)
